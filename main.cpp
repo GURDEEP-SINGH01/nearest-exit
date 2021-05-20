@@ -84,7 +84,7 @@ void update(char a[][10],int s,int e,string z)
     }
 
 }
-void bfsupdate(char a[][10],int s,int e,string st)
+void dfsupdate(char a[][10],int s,int e,string st)
 {
     if(s<0||e<0||s>=10||e>=10)
         return;
@@ -109,13 +109,13 @@ void bfsupdate(char a[][10],int s,int e,string st)
     temp[s][e]=true;
 
     if(vis[s+1][e]==true)
-         bfsupdate(a,s+1,e,st+"D");
+         dfsupdate(a,s+1,e,st+"D");
     if(vis[s-1][e]==true)
-    bfsupdate(a,s-1,e,st+"U");
+    dfsupdate(a,s-1,e,st+"U");
     if(vis[s][e+1]==true)
-    bfsupdate(a,s,e+1,st+"R");
+    dfsupdate(a,s,e+1,st+"R");
     if(vis[s][e-1]==true)
-    bfsupdate(a,s,e-1,st+"L");
+    dfsupdate(a,s,e-1,st+"L");
     //temp[s][e]=false;
 
 }
@@ -275,7 +275,7 @@ a[s][e]='S';
 
      memset(temp,false,sizeof(temp));
 
-    bfsupdate(a,s,e,st);
+    dfsupdate(a,s,e,st);
 
     string z=ma[0];
     cout<<"MINIMUM NO OF STEPS NEEDED  "<<z.size()<<endl;
