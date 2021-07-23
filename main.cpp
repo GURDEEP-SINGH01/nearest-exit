@@ -18,43 +18,7 @@ bool check(int s,int e)
 
 
 }
-/*void bfs(char a[][6],int s,int e,string st,int p,int m)
-{
-    if(s<0||e<0||s>=10||e>=6)
-        return;
-    if(vi[s][e]==true)
-        return;
-        if(a[s][e]=='0')
-            return;
-    if(a[s][e]=='1'&&(s!=p&&e!=m))
-    return;
 
-    if(s==p&&e==m)
-    {
-        if(ma[0].empty())
-        {
-        // cout<<ma.size()<<" "<<st<<endl;
-            ma[0]=(st);
-         // cout<<ma.size()<<" --"<<ma[0]<<endl;
-        }
-        else
-        {
-            if(st.size()<ma[0].size())
-            {
-              // cout<<st<<endl;
-
-                ma[0]=(st);
-            }
-        }
-    }
-        vi[s][e]=true;
-        //cout<<s<<" "<<e<<endl;
-    bfs(a,s+1,e,st+"D",p,m);
-    bfs(a,s-1,e,st+"U",p,m);
-    bfs(a,s,e+1,st+"R",p,m);
-    bfs(a,s,e-1,st+"L",p,m);
-    vi[s][e]=false;
-}*/
 void update(char a[][10],int s,int e,string z)
 {
     for(int i=0;i<z.size();i++)
